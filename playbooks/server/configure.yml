@@ -19,6 +19,7 @@
         name: wheel
         state: present
     - name: Allow 'wheel' group to have passwordless sudo
+      become: true
       ansible.builtin.lineinfile:
         dest: /etc/sudoers
         state: present
